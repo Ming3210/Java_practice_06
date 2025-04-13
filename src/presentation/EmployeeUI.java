@@ -11,8 +11,13 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeUI {
-
     private static EmployeeService employeeService;
+
+    public EmployeeUI() {
+        if (employeeService == null) {
+            employeeService = new EmployeeServiceImpl();
+        }
+    }
 
     public static void main(String[] args) {
         employeeService = new EmployeeServiceImpl(); // Tạo đối tượng EmployeeServiceImpl
@@ -73,7 +78,7 @@ public class EmployeeUI {
     private void showEmployeeList(Scanner scanner) {
         System.out.print("Nhập số trang: ");
         int page = scanner.nextInt();
-        int pageSize = 10; // Mỗi trang có 10 nhân viên
+        int pageSize = 10;
 
         List<Employee> employees = employeeService.getEmployees(page, pageSize);
         for (Employee employee : employees) {

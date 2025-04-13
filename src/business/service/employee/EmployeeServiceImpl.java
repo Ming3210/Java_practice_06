@@ -12,7 +12,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeDAO employeeDAO;
 
     public EmployeeServiceImpl() {
-        this.employeeDAO = new EmployeeDAOImpl();  // Kết nối với DAO
+        employeeDAO = new EmployeeDAOImpl();
     }
 
     @Override

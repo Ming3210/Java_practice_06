@@ -29,18 +29,18 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             while (rs.next()) {
                 Employee e = new Employee(
                         rs.getString("em_address"),
-                        rs.getString("em_date_of_birth"),
-                        rs.getInt("em_department_id"),
+                        rs.getString("em_dob"),
+                        rs.getInt("de_id"),
                         rs.getString("em_email"),
                         rs.getString("em_id"),
                         Gender.valueOf(rs.getString("em_gender")),
-                        rs.getString("em_password"),
+                        rs.getString("password"),
                         rs.getString("em_phone"),
-                        rs.getString("em_role"),
+                        rs.getString("role"),
                         rs.getDouble("em_salary"),
                         rs.getDouble("em_salary_tier"),
                         EmployeeStatus.valueOf(rs.getString("em_status")),
-                        rs.getString("em_username")
+                        rs.getString("username")
                 );
                 list.add(e);
             }

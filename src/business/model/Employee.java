@@ -32,6 +32,16 @@ public class Employee {
         this.username = username;
     }
 
+    public Employee(String employeeID, String username, String email, String phone, double salary, EmployeeStatus status, int departmentID) {
+        this.employeeID = employeeID;
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.status = status;
+        this.departmentID = departmentID;
+    }
+
     public Employee(String username, int employeeCount) {
         this.username = username;
         this.employeeCount = employeeCount;
